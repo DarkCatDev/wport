@@ -1,0 +1,16 @@
+.vlog {
+   border: 2px solid white;
+   padding: 10px;
+   font-family: 'Courier New', Courier, monospace; 
+}
+
+
+.caption-title h4 {
+    font-size: large;
+    margin: 0;
+}
+
+.caption-content p {
+    margin-top: 3px;
+    margin-bottom: 0;
+}

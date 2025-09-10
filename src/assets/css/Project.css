@@ -1,0 +1,49 @@
+.cbc-projlist {
+    justify-content: start;
+}
+
+
+.pt h2 {
+    font-weight: normal;
+}
+
+.pt ul {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.pt ul li {
+    list-style: none;
+
+    border: 5px outset rgb(100, 99, 99);
+    width: fit-content;
+    padding: 10px;
+
+    border-radius: 10px;
+    text-align: center;
+
+    width: 220px;
+    background-color: #3d3d3d;
+}
+
+.pt h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.pimg {
+    width: 150px;
+}
+
+.ptext {
+    margin-left: 5%;
+    margin-right: 5%;
+
+    font-size: small;
+    text-align: justify;
+}
+
+.stats {
+    font-style: italic;
+}
+

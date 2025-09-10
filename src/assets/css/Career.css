@@ -1,0 +1,80 @@
+.cbc-caretitle {
+    display: flex;
+    justify-content: center;
+}
+
+.educ {
+    width: 200px;
+    border: 7px outset white;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 41);
+    text-align: center;
+
+}
+
+
+.rcareer {
+    width: 200px;
+    border: 7px outset white;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 41);
+    text-align: center;
+
+}
+
+.cbc-careinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+}
+
+.cbc-careinfo p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.cbc-careinfo h4 {
+    margin: 0;
+}
+
+.chistory {
+    margin-top: 20px;
+
+}
+
+.chistory h2 {
+    border-bottom: 8px double white;
+
+}
+
+.jobdes h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.jobdes p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.cimg {
+    width: 200px;
+}
+
+
+.gradimg {
+    width: 150px;
+    margin-top: 60px;
+}
+
+
+.wimg {
+    margin-top: 50px;
+    width: 120px;
+    margin-bottom: 0;
+}
+

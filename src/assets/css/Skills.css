@@ -1,0 +1,33 @@
+.skimg {
+    display: block;
+    width: 900px;
+    max-width: none;
+}
+
+.window {
+    overflow: auto;
+    width: 800px;
+    height: 500px;
+
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cen {
+    display: flex;
+    justify-content: center;
+}
+
+
+.graph {
+    width: 400px;
+    height: 400px;
+}
+
+
+#myRadar {
+    width: 100% !important;
+    height: 100% !important;
+}
