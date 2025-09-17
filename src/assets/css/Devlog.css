@@ -14,3 +14,11 @@
     margin-top: 3px;
     margin-bottom: 0;
 }
+
+
+.cbc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}

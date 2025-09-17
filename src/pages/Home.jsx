@@ -24,6 +24,7 @@ import icon6 from '../assets/img/icon6.png';
 import aet from '../assets/img/projects/aet.png';
 import olm from '../assets/img/projects/olm.png';
 import rrc from '../assets/img/projects/rrc.png';
+import bgn from '../assets/img/projects/BAGANI.png';
 
 
 import grad from '../assets/img/career/grad.png';
@@ -219,6 +220,16 @@ function Home(){
                                                 OLM is a web text based game of an orphan living in the world of Arcanus.
                                             </p>
                                         </li>
+                                        <li>
+                                            <img src={bgn} alt="404" className='pimg'/>
+                                            <h4>BAGANI: The Untold</h4>
+                                            <p className="stats">
+                                                Planning
+                                            </p>    
+                                            <p className='ptext'>
+                                                A tactical rpg based on alternate history of Philippines.
+                                            </p>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="pt">
@@ -326,6 +337,16 @@ function Home(){
                             </div>
 
                             <div className="cbc-info">
+                                <div class="vlog">
+                                    <div class="caption-title">
+                                        <h4>Devlog #2: A new idea</h4>
+                                    </div>
+                                    <div class="caption-content">
+                                        <p>Sept. 18, 2025. </p>
+                                        <p>A new game idea came into mind upon trying to build one of my games and decided to prioritize it.</p>
+                                    </div>
+                                </div>
+
                                 <div class="vlog">
                                     <div class="caption-title">
                                         <h4>Devlog #1: A new Portfolio Website</h4>

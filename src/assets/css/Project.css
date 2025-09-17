@@ -8,8 +8,9 @@
 }
 
 .pt ul {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .pt ul li {
