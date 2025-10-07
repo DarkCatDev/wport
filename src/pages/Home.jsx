@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
 
 
 import '../assets/css/Home.css';
 import '../assets/css/Career.css';
 import '../assets/css/Project.css';
-import '../assets/css/Skills.css';
-import '../assets/css/Devlog.css';
+
 
 
 import { Link } from 'react-router-dom';
@@ -21,9 +19,7 @@ import icon4 from '../assets/img/icon4.png';
 import icon5 from '../assets/img/icon5.png';
 import icon6 from '../assets/img/icon6.png';
 
-import aet from '../assets/img/projects/aet.png';
 import olm from '../assets/img/projects/olm.png';
-import rrc from '../assets/img/projects/rrc.png';
 import bgn from '../assets/img/projects/BAGANI.png';
 
 
@@ -36,65 +32,7 @@ import work from '../assets/img/career/work.png';
 function Home(){
     const [activeDiv, setActiveDiv] = useState("home");
 
-    const radarRef = useRef(null);
-
-    useEffect(() => {
-    if (activeDiv === "skil" && radarRef.current) {
-      const ctx = radarRef.current.getContext("2d");
-
-      // destroy old chart instance if exists (avoids duplication)
-      if (radarRef.current.chart) {
-        radarRef.current.chart.destroy();
-      }
-
-      radarRef.current.chart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-          labels: ['Java', 'Python', 'C++', 'Dart', 'HTML/CSS/JS', 'PHP'],
-          datasets: [
-            {
-              label: 'Programming Language Mastery 9.9.2025',
-              data: [20, 20, 25, 10, 30, 0,],
-              fill: true,
-              backgroundColor: 'rgba(54, 162, 235, 0.2)',
-              borderColor: 'rgba(54, 162, 235, 1)',
-              pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-            },
-          ],
-        },
-        options: {
-          elements: {
-            line: { borderWidth: 2 },
-          },
-          scales: {
-            r: {
-              beginAtZero: true,
-              min: 0,
-              max: 100,
-              ticks: {
-                stepSize: 20,
-                color: '#fff',
-
-                font: {
-                    size: 14,
-                    family: "Arial",
-                    weight: "bold",
-                },
-                callback: function(value){
-                    const letters = ["F","E","D","C","B","A"];
-                    return letters[value/20] || value;
-                }
-               },
-
-            grid: {
-                color: "rgb(255,255,255,0.5)",
-                },
-            },
-          },
-        },
-      });
-    }
-  }, [activeDiv]);
+    
 
 
     return(
@@ -109,9 +47,14 @@ function Home(){
                         <h4>ARPIE</h4>
                     </div>
                     <div className="title">
-                        <button onClick={() => setActiveDiv("jobtitle")} className={activeDiv === "jobtitle" ? "active" : ""}>
-                            <h4>ENTRY-LEVEL DEV</h4>
-                        </button>
+                        {/*
+                            <button onClick={() => setActiveDiv("jobtitle")} className={activeDiv === "jobtitle" ? "active" : ""}>
+                                <h4>ENTRY-LEVEL DEV</h4>
+                            </button>
+                        */}
+                        <p>
+                            Entry-Level Software Engineer
+                        </p>
                     </div>
                 </div>
                 <div className="p2">
@@ -165,20 +108,16 @@ function Home(){
                     <div className="h-bar">
                         <ul>
                             <li>
-                                <button onClick={( ) => setActiveDiv("home")} className={activeDiv === "home" ? "active" : ""}>HOME</button></li>
+                                <button onClick={( ) => setActiveDiv("home")} id='highlight' className={activeDiv === "home" ? "active" : ""}>HOME</button></li>
                             <li>
-                                <button onClick={( ) => setActiveDiv("proj")} className={activeDiv === "proj" ? "active" : ""}>PROJECTS</button>
+                                <button onClick={( ) => setActiveDiv("proj")} id='highlight' className={activeDiv === "proj" ? "active" : ""}>PROJECTS</button>
                             </li>
                             <li>
-                                <button onClick={( ) => setActiveDiv("care")} className={activeDiv === "care" ? "active" : ""}>CAREER</button>
+                                <button onClick={( ) => setActiveDiv("care")} id='highlight' className={activeDiv === "care" ? "active" : ""}>CAREER</button>
                             </li>
                             <li>
-                                <button onClick={( ) => setActiveDiv("skil")} className={activeDiv === "skil" ? "active" : ""}>SKILLS</button>
+                                <button onClick={( ) => setActiveDiv("skil")} id='highlight' className={activeDiv === "skil" ? "active" : ""}>SKILLS</button>
                             </li>
-                            <li>
-                                <button onClick={( ) => setActiveDiv("devl")} className={activeDiv === "devl" ? "active" : ""}>DEVLOG</button>
-                            </li>
-                                
                         </ul>
                     </div>
                 </div>
@@ -224,7 +163,7 @@ function Home(){
                                             <img src={bgn} alt="404" className='pimg'/>
                                             <h4>BAGANI: The Untold</h4>
                                             <p className="stats">
-                                                Planning
+                                                Prototyping
                                             </p>    
                                             <p className='ptext'>
                                                 A tactical rpg based on alternate history of Philippines.
@@ -302,64 +241,181 @@ function Home(){
                     {activeDiv == "skil" && (
                         <div className='cbc cbc-ski'>
                             <div className='cbc-title'>
-                                <h1>Skills and Expertise</h1>
+                                <h1>Proffessional Skills</h1>
+                            </div>
+                                
+                            <div>
+                                <h3>
+                                    Langauge Profeciency
+                                </h3>
 
+                                <p>
+                                    <ul>
+                                        <li>
+                                            Has Great Fundamentals and a Basic understanding of Programming structure and algorithms.
+                                        </li>
+                                        <li>
+                                            Proficiency in C++ with an average grade of 1.6 in Programming, and created simple terminal-based programs.
+                                        </li>
+                                        <li>
+                                            Competent in Java and Python with a project of a Simple Terminal-Based Restaurant Reservation Chatbot and an Arithmetic Expression Tokenizer, which also displays an understanding of Natural Language Processing
+                                        </li>
+                                        <li>
+                                            Dabbled and has ample experience in C# and PHP. Previously worked on Laravel with PHP as a backend with the assistance of AI in unfamiliar terms and concepts.
+                                        </li>
+                                        <li>
+                                            Competent in HTML and CSS for basic to intermediate web and web app development. 
+                                        </li>
+                                        <li>
+                                            Basic JavaScript understanding and potential.
+                                        </li>
+                                        <li>
+                                            Exploring Dart and Godot Script.
+                                        </li>
+                                    </ul>
+                                </p>
                             </div>
 
-                            
+                            <div>
+                                <h3>
+                                    Framework Mastery
+                                </h3>
 
-                            <div className="cen">
+                                <p>
+                                    <ul>
+                                        <li>
+                                            Dabbled with multiple frameworks and gained basic knowledge in framework management.
+                                        </li>
+                                        <li>
+                                            Competent in the React.js framework with an inclination to Vite. Developed my web portfolio using the React.js framework.
+                                        </li>
+                                        <li>
+                                            Planned and initiated the thesis web portal with the focus on backend, using the Django framework. Connected the database with MySQL and Xampp.
+                                        </li>
+                                        <li>
+                                            Co-initiated a web portal for the Guidance, Admission, and Placement office using the Laravel Framework. Connected MySQL and Xampp.
+                                        </li>
+                                        <li>
+                                            Exploring Flutter Framework.
+                                        </li>
+                                        
+                                    </ul>
+                                </p>
+                            </div>
 
-                                {/*
-                                    Update for Later
+                            <div>
+                                <h3>
+                                    Computer Science Fundamentals
+                                </h3>
 
-                                    <div className="cbc-info window">
-                                    <img src={icon1} alt="404" className='skimg'/>
-                                </div>
-                                
-                                */}
+                                <p>
+                                    <ul>
+                                        <li>
+                                            Adept in Database management with adequate knowledge in using MySQL and Xampp server. Has a basic understanding of how SQL commands.
+                                        </li>
+                                        <li>
+                                           Competent in Object-Oriented Programming with a grade of 1.8 and a basic understanding of the concept of class encapsulation and hiding.
+                                        </li>
+                                        <li>
+                                            Grasped the concept of Data Structure and Algorithms with a grade of 2.0
+                                        </li>
+                                        <li>
+                                            Fundamental understanding in Programming language, including Natural Language Processing and Tokenization
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
 
-                                <div className="graph">
-                                    <canvas ref={radarRef} id="myRadar"></canvas>
-                                </div>
+                            <div>
+                                <h3>
+                                    Tools and Software
+                                </h3>
 
-                                
-                                
+                                <p>
+                                    <ul>
+                                        <li>
+                                            Microsoft Office proficiency focusing on MS Word for Document Formatting, MS Excel for Spreadsheet management, and MS PowerPoint for Presentation Design.
+                                        </li>
+                                        <li>
+                                            Visual Studio Code, CodeBlocks, and Eclipse for IDE and program development, Figma for Prototyping, and Git/GitHub for Version Control.
+                                        </li>
+                                        <li>
+                                            ClickUp site for Project Management and Workflow.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Softskills
+                                </h3>
+
+                                <p>
+                                    <ul>
+                                        <li>
+                                            A project-based learner who grows skills through practical application.
+                                        </li>
+                                        <li>
+                                           Demonstrates a strong work ethic in accomplishing tasks and goals.
+
+                                        </li>
+                                        <li>
+                                            Adapts and adjusts quickly with flexibility in various situations.
+
+                                        </li>
+                                        <li>
+                                            Upholds integrity and professionalism in both work and conduct.
+
+                                        </li>
+                                        <li>
+                                             Hardworking and self-motivated in completing responsibilities.
+
+                                        </li>
+                                        <li>
+                                            Open-minded and willing to learn from new experiences.
+
+                                        </li>
+                                        <li>
+                                            Works collaboratively and values effective teamwork.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Langauge Profeciency
+                                </h3>
+
+                                <p>
+                                    <ul>
+                                        <li>
+                                            Has Great Fundamentals and a Basic understanding of Programming structure and algorithms.
+                                        </li>
+                                        <li>
+                                            Proficiency in C++ with an average grade of 1.6 in Programming, and created simple terminal-based programs.
+                                        </li>
+                                        <li>
+                                            Competent in Java and Python with a project of a Simple Terminal-Based Restaurant Reservation Chatbot and an Arithmetic Expression Tokenizer, which also displays an understanding of Natural Language Processing
+                                        </li>
+                                        <li>
+                                            Dabbled and has ample experience in C# and PHP. Previously worked on Laravel with PHP as a backend with the assistance of AI in unfamiliar terms and concepts.
+                                        </li>
+                                        <li>
+                                            Competent in HTML and CSS for basic to intermediate web and web app development. 
+                                        </li>
+                                        <li>
+                                            Basic JavaScript understanding and potential.
+                                        </li>
+                                        <li>
+                                            Exploring Dart and Godot Script.
+                                        </li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     )}
-
-                    {activeDiv == "devl" && (
-                        <div className='cbc'>
-                            <div className='cbc-title'>
-                                <h1>Development Logs and Updates</h1>
-
-                            </div>
-
-                            <div className="cbc-info">
-                                <div class="vlog">
-                                    <div class="caption-title">
-                                        <h4>Devlog #2: A new idea</h4>
-                                    </div>
-                                    <div class="caption-content">
-                                        <p>Sept. 18, 2025. </p>
-                                        <p>A new game idea came into mind upon trying to build one of my games and decided to prioritize it.</p>
-                                    </div>
-                                </div>
-
-                                <div class="vlog">
-                                    <div class="caption-title">
-                                        <h4>Devlog #1: A new Portfolio Website</h4>
-                                    </div>
-                                    <div class="caption-content">
-                                        <p>Sept. 10, 2025. </p>
-                                        <p>I changed my Web Portfolio as there were bugs in the site. I'm thinking of starting a video blog but I'm still a bit shy in front of a cam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
 
                     {activeDiv == "jobtitle" &&(
                         <div className="jobtitle">
