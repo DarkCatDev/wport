@@ -21,6 +21,7 @@ import icon6 from '../assets/img/icon6.png';
 
 import olm from '../assets/img/projects/olm.png';
 import bgn from '../assets/img/projects/BAGANI.png';
+import lb from '../assets/img/projects/lb.png';
 
 
 import grad from '../assets/img/career/grad.png';
@@ -144,7 +145,7 @@ function Home(){
                                 <h1>Projects and Portfolio</h1>
                             </div>
                             <div className="cbc-projlist">
-                                <div className="pt">
+                                <div className="pt gd">  {/* Game Dev */}
                                     <h2>
                                         Game Development
                                     </h2>
@@ -171,20 +172,38 @@ function Home(){
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="pt">
+                                <div className="pt mad"> {/* Mobile App Dev*/}
                                     <h2>
                                         Mobile App Development
                                     </h2>
                                     <ul>
-
+                                        
                                     </ul>
                                 </div>
-                                <div className="pt">
+                                <div className="pt dad"> {/* Desktop App Dev*/}
                                     <h2>
                                         Desktop App Development
                                     </h2>
                                     <ul>
                                         
+                                    </ul>
+                                </div>
+
+                                <div className="pt wd"> {/* Desktop App Dev*/}
+                                    <h2>
+                                        Web Development
+                                    </h2>
+                                    <ul>
+                                       <li>
+                                            <img src={lb} alt="404" className='pimg'/>
+                                            <h4>Link-Hub</h4>
+                                            <p className="stats">
+                                                Version 1.0
+                                            </p>    
+                                            <p className='ptext'>
+                                                A landing page and a link page for my Social and Proffessional Accounts.
+                                            </p>
+                                        </li> 
                                     </ul>
                                 </div>
 
